@@ -1,0 +1,22 @@
+Package: quanyu
+Title: Interactive Bushfire Analytics in SE Australia: FWI-MSR & Burned Area
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Quanyu", family = "Qian",
+           email = "qqia0010@student.monash.edu",
+           role = c("aut","cre"))
+Description: Provides cleaned ERA5-derived fire weather metrics (FWI and MSR) and
+    MODIS burned area summaries for southeastern Australia, together with a Shiny
+    app for interactive exploration of their relationships and a vignette that
+    documents the data processing steps used in prior ETC5523 assignments.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Depends: R (>= 4.1)
+Imports: shiny, dplyr, ggplot2, readr, tidyr
+LazyData: true
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
