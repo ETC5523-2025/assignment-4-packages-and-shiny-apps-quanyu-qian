@@ -21,13 +21,40 @@ It provides a small demo dataset and a Shiny app that allows users to interactiv
 ---
 
 ## 🧠 Background
-This package was built upon the earlier assignments in ETC5523, where ERA5 and MODIS datasets were used to study Australian bushfire conditions.  
-In this simplified version, we include a synthetic dataset `se_fire_monthly` (12 monthly observations) that mimics the relationship between FWI and burned area.  
-The dataset was created using the script in `data-raw/make_data.R`.
+This package builds upon earlier ETC5523 assignments where ERA5 and MODIS data were used to study bushfire conditions.
+For this assignment, a simplified and synthetic dataset `se_fire_monthly` (12 observations) was created to demonstrate the link between FWI and burned area.
+The dataset was generated using the R script `data-raw/make_data.R`, ensuring reproducibility.
 
 ---
 
 ## 🧩 Installation
+
 This is a demonstration package created for ETC5523 Assignment 4.
 
-You can load it locally in RStudio after building the package.
+You can build and load it in **RStudio** using:
+
+```r
+# Load the package in development mode
+devtools::load_all()
+
+# Launch the interactive Bushfire Explorer app
+run_app()
+```
+Once loaded, you can explore the relationship between **fire weather index (FWI)** and **burned area** interactively through the Bushfire Explorer Shiny app.
+
+## 🚀 Package Features
+
+This package contains the following components:
+
+| Component | Description |
+|------------|-------------|
+| **`se_fire_monthly`** | A small tidy dataset (12 rows) containing FWI, burned area, and month. |
+| **`run_app()`** | A Shiny app that visualises the relationship between FWI and log(burned area) with filters for month and minimum FWI. |
+| **Vignette** | Describes how the dataset was processed and how the Shiny app is designed. |
+| **`inst/app/www/style.css`** | Provides custom CSS styling for the Shiny interface. |
+
+---
+
+## 📜 License
+This package is released under the **MIT License**.  
+The license details are provided in the LICENSE file included in this package.

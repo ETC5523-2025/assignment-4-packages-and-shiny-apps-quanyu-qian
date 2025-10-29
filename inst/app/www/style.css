@@ -1,0 +1,44 @@
+body {
+  background-color: #f4f8fb;
+  color: #333333;
+  font-family: "Segoe UI", "Helvetica", sans-serif;
+}
+
+h2, h3 {
+  color: #003366;
+  font-weight: 600;
+}
+
+.well {
+  background-color: #e6eef9;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+}
+
+
+.sum-note {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+  margin-top: 6px;
+}
+.sum-note .sum-emph {
+  color: #0b3c5d;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.filters-badge{
+  background:#eaf3ff; padding:6px 10px; border-radius:8px;
+  display:inline-block; margin-bottom:8px; font-size:14px; font-weight:600;
+}
+
+
+.btn {
+  background-color: #003366;
+  color: white;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #0055aa;
