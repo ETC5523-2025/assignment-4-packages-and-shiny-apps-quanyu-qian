@@ -8,7 +8,11 @@ It provides a small demo dataset and a Shiny app that allows users to
 interactively explore the relationship between **Fire Weather Index
 (FWI)** and **burned area** across months.
 
-------------------------------------------------------------------------
+## 🌐 Pkgdown Documentation Site
+
+You can view the full documentation website here:  
+👉
+**<https://etc5523-2025.github.io/assignment-4-packages-and-shiny-apps-quanyu-qian/>**
 
 ## 🧠 Background
 
@@ -19,7 +23,8 @@ was created to demonstrate the link between FWI and burned area. The
 dataset was generated using the R script `data-raw/make_data.R`,
 ensuring reproducibility.
 
-------------------------------------------------------------------------
+📘 **View full documentation site here:**  
+<https://etc5523-2025.github.io/assignment-4-packages-and-shiny-apps-quanyu-qian/>
 
 ## 🧩 Installation
 
@@ -49,8 +54,6 @@ This package contains the following components:
 | **`run_app()`** | A Shiny app that visualises the relationship between FWI and log(burned area) with filters for month and minimum FWI. |
 | **Vignette** | Describes how the dataset was processed and how the Shiny app is designed. |
 | **`inst/app/www/style.css`** | Provides custom CSS styling for the Shiny interface. |
-
-------------------------------------------------------------------------
 
 ## 📜 License
 

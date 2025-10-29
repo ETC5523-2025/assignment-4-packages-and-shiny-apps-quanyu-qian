@@ -14,6 +14,30 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+# Getting Started with _quanyu_
+
+This vignette introduces the **quanyu** package — an R package developed for _ETC5523 Assignment 4_.
+This short vignette demonstrates how to use the quanyu package.
+
+🧩 Load the package
+```r
 library(quanyu)
 ```
+
+
+🔍 View the dataset
+```r
+
+head(se_fire_monthly)
+
+```
+
+🚀 Launch the Shiny app
+```r
+run_app()
+
+```
+
+
+
+This app allows you to explore the relationship between Fire Weather Index (FWI) and burned area interactively.

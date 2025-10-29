@@ -1,16 +1,10 @@
 ---
 output: github_document
 ---
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
 # quanyu
@@ -18,14 +12,20 @@ knitr::opts_chunk$set(
 **quanyu** is an R package developed for **ETC5523 Assignment 4**.  
 It provides a small demo dataset and a Shiny app that allows users to interactively explore the relationship between **Fire Weather Index (FWI)** and **burned area** across months.
 
----
+
+## 🌐 Pkgdown Documentation Site
+
+You can view the full documentation website here:  
+👉 **[https://etc5523-2025.github.io/assignment-4-packages-and-shiny-apps-quanyu-qian/](https://etc5523-2025.github.io/assignment-4-packages-and-shiny-apps-quanyu-qian/)**
+
 
 ## 🧠 Background
 This package builds upon earlier ETC5523 assignments where ERA5 and MODIS data were used to study bushfire conditions.
 For this assignment, a simplified and synthetic dataset `se_fire_monthly` (12 observations) was created to demonstrate the link between FWI and burned area.
 The dataset was generated using the R script `data-raw/make_data.R`, ensuring reproducibility.
 
----
+📘 **View full documentation site here:**  
+[https://etc5523-2025.github.io/assignment-4-packages-and-shiny-apps-quanyu-qian/](https://etc5523-2025.github.io/assignment-4-packages-and-shiny-apps-quanyu-qian/)
 
 ## 🧩 Installation
 
@@ -52,8 +52,6 @@ This package contains the following components:
 | **`run_app()`** | A Shiny app that visualises the relationship between FWI and log(burned area) with filters for month and minimum FWI. |
 | **Vignette** | Describes how the dataset was processed and how the Shiny app is designed. |
 | **`inst/app/www/style.css`** | Provides custom CSS styling for the Shiny interface. |
-
----
 
 ## 📜 License
 This package is released under the **MIT License**.  
