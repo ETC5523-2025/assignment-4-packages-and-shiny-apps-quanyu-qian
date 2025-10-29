@@ -2,10 +2,20 @@
 % Please edit documentation in R/run_app.R
 \name{run_app}
 \alias{run_app}
-\title{Launch the Shiny app bundled in this package}
+\title{Launch the Bushfire Explorer App}
 \usage{
 run_app()
 }
+\value{
+Opens the Shiny app in your browser.
+}
 \description{
-Launch the Shiny app bundled in this package
+This function launches the Shiny web application bundled in the package.
+It provides an interactive interface to explore the relationship between
+Fire Weather Index (FWI) and burned area using the packaged dataset.
+}
+\examples{
+if (interactive()) {
+  run_app()
+}
 }

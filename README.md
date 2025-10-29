@@ -55,4 +55,5 @@ This package contains the following components:
 ## 📜 License
 
 This package is released under the **MIT License**.  
-See the [LICENSE file](./LICENSE) for details.
+The license details are provided in the LICENSE file included in this
+package.
