@@ -1,4 +1,17 @@
-url: ~
+url: https://etc5523-2025.github.io/assignment-4-packages-and-shiny-apps-quanyu-qian/
+
 template:
   bootstrap: 5
 
+navbar:
+  title: "quanyu"
+  left:
+    - text: "Reference"
+      href: reference/index.html
+    - text: "Articles"
+      href: articles/index.html
+    - text: "License"
+      href: LICENSE.html
+  right:
+    - icon: fa-github
+      href: https://github.com/ETC5523-2025/assignment-4-packages-and-shiny-apps-quanyu-qian
