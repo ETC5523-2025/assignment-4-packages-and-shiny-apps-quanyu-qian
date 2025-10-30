@@ -60,23 +60,130 @@
 <div class="section level2">
 <h2 id="getting-started-with-quanyu">Getting Started with <em>quanyu</em><a class="anchor" aria-label="anchor" href="#getting-started-with-quanyu"></a>
 </h2>
-<p>This vignette introduces the <strong>quanyu</strong> package — an R
-package developed for <em>ETC5523 Assignment 4</em>. This short vignette
-demonstrates how to use the quanyu package.</p>
-<p>🧩 Load the package</p>
+<p>The <strong>quanyu</strong> package was created for <em>ETC5523
+Assignment 4</em> to demonstrate how to bundle a dataset and a Shiny app
+into an R package.<br>
+It allows users to explore how <strong>Fire Weather Index (FWI)</strong>
+relates to <strong>burned area</strong> in bushfire events.</p>
+<div class="section level3">
+<h3 id="what-this-package-does">🔥 What this package does<a class="anchor" aria-label="anchor" href="#what-this-package-does"></a>
+</h3>
+<p>The package provides: - A dataset <code>se_fire_monthly</code>
+summarising monthly fire weather and burned area. - A Shiny app
+(<code><a href="../reference/run_app.html">run_app()</a></code>) that lets users interactively explore how FWI
+affects burned area.</p>
+<p>This helps users visually understand whether higher fire danger (FWI)
+corresponds to larger burned areas — and how this relationship changes
+by month.</p>
+</div>
+<div class="section level3">
+<h3 id="load-the-package">⚙️ Load the package<a class="anchor" aria-label="anchor" href="#load-the-package"></a>
+</h3>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">quanyu</span><span class="op">)</span></span></code></pre></div>
-<p>🔍 View the dataset</p>
+</div>
+<div class="section level3">
+<h3 id="view-the-dataset">🔍 View the dataset<a class="anchor" aria-label="anchor" href="#view-the-dataset"></a>
+</h3>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">se_fire_monthly</span><span class="op">)</span></span></code></pre></div>
-<p>🚀 Launch the Shiny app</p>
+<p>The dataset includes:</p>
+<ul>
+<li>
+<strong>month</strong> – Month of observation<br>
+</li>
+<li>
+<strong>FWI</strong> – <em>Fire Weather Index</em> (higher = more
+dangerous fire conditions)<br>
+</li>
+<li>
+<strong>burned_area</strong> – <em>Area burned in hectares</em> (the
+plot uses <code>log10(burned_area)</code>)</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="launch-the-shiny-app">🚀 Launch the Shiny app<a class="anchor" aria-label="anchor" href="#launch-the-shiny-app"></a>
+</h3>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/run_app.html">run_app</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>This app allows you to explore the relationship between Fire Weather
-Index (FWI) and burned area interactively.</p>
+<p><strong>App features:</strong></p>
+<ul>
+<li>
+<strong>Slider:</strong> Filter by minimum FWI (to focus on
+high-risk conditions)</li>
+<li>
+<strong>Dropdown:</strong> Select a month to see seasonal
+patterns</li>
+<li>
+<strong>Checkbox:</strong> Show or hide the trend line</li>
+</ul>
 </div>
-  </main>
+<div class="section level3">
+<h3 id="interpreting-the-interactive-results">Interpreting the interactive results<a class="anchor" aria-label="anchor" href="#interpreting-the-interactive-results"></a>
+</h3>
+<p>The following section explains how to interpret the interactive
+outputs from the Bushfire Explorer app and why the patterns matter in
+practice.</p>
+<div class="section level4">
+<h4 id="interpretation-and-real-world-implications">Interpretation and Real-world Implications<a class="anchor" aria-label="anchor" href="#interpretation-and-real-world-implications"></a>
+</h4>
+<p>The <em>Bushfire Explorer</em> app provides an interactive way to
+explore how the <strong>Fire Weather Index (FWI)</strong> relates to
+<strong>burned area size</strong>, and how this relationship changes
+under different conditions.</p>
+</div>
+<div class="section level4">
+<h4 id="observed-patterns">1. Observed patterns<a class="anchor" aria-label="anchor" href="#observed-patterns"></a>
+</h4>
+<p>In general, the data show that larger burned areas often occur under
+higher FWI values, indicating that <strong>extreme fire weather tends to
+amplify fire impact</strong>.<br>
+However, when the FWI threshold is set very high (e.g., above 50), the
+number of observations becomes small, and the correlation may weaken or
+even turn negative.<br>
+This reflects <strong>the natural variability of fire events</strong> —
+at extreme weather levels, other factors (such as vegetation type, fuel
+availability, or firefighting response) can dominate the outcome.</p>
+</div>
+<div class="section level4">
+<h4 id="practical-insight">2. Practical insight<a class="anchor" aria-label="anchor" href="#practical-insight"></a>
+</h4>
+<p>This variability highlights why <strong>interactive
+filtering</strong> is important:<br>
+users can adjust thresholds to observe how relationships change across
+conditions, months, or sample sizes.<br>
+For emergency planners, this means that <strong>relying on a single
+static model could be misleading</strong>; instead, dynamic exploration
+can reveal when FWI is a strong predictor and when it is not.</p>
+</div>
+<div class="section level4">
+<h4 id="seasonal-differences">3. Seasonal differences<a class="anchor" aria-label="anchor" href="#seasonal-differences"></a>
+</h4>
+<p>By selecting months, users can see that the FWI–burned area
+relationship fluctuates seasonally.<br>
+For example, in drier months, even moderate FWI levels can result in
+large burned areas, whereas in wetter months, the effect may flatten
+out.<br>
+This suggests that <strong>fire risk management strategies should be
+tailored to seasonal and regional contexts</strong>.</p>
+</div>
+<div class="section level4">
+<h4 id="conclusion">4. Conclusion<a class="anchor" aria-label="anchor" href="#conclusion"></a>
+</h4>
+<p>The Bushfire Explorer demonstrates how combining <strong>data
+visualization</strong> and <strong>interactive filtering</strong> helps
+translate raw climate indicators into nuanced, actionable
+insights.<br>
+Instead of offering a single conclusion, the app encourages
+<strong>exploratory reasoning</strong>, showing that relationships
+between weather and fire impact are conditional and
+context-dependent.</p>
+</div>
+</div>
+</div>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
