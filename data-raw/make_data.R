@@ -1,3 +1,17 @@
+#' Simulated dataset for the Bushfire Explorer app
+#'
+#' This script generates a synthetic dataset (se_fire_monthly) that mimics
+#' the relationship between Fire Weather Index (FWI) and burned area.
+#' The data are simulated for demonstration purposes, not from real records.
+#'
+#' The resulting dataset is saved into the package for use in the Shiny app.
+#'
+#' Steps:
+#' 1. Generate random FWI values (10–59 range).
+#' 2. Compute burned_area using an exponential function with random noise.
+#' 3. Assign random month labels.
+#'
+#' The dataset is used in the Shiny app to demonstrate interactive filtering.
 # Demo dataset that mimics the relationship between Fire Weather Index (FWI) and burned area
 set.seed(123)
 

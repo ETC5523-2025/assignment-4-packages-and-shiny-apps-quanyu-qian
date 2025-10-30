@@ -12,6 +12,8 @@ knitr::opts_chunk$set(echo = TRUE)
 **quanyu** is an R package developed for **ETC5523 Assignment 4**.  
 It provides a small demo dataset and a Shiny app that allows users to interactively explore the relationship between **Fire Weather Index (FWI)** and **burned area** across months.
 
+Note: The dataset se_fire_monthly is simulated for demonstration in ETC5523 Assignment 4 (see data-raw/make_data.R). It is not real-world measurements.
+
 
 ## 🌐 Pkgdown Documentation Site
 
@@ -48,9 +50,9 @@ This package contains the following components:
 
 | Component | Description |
 |------------|-------------|
-| **`se_fire_monthly`** | A small tidy dataset (12 rows) containing FWI, burned area, and month. |
+| **`se_fire_monthly`** | A **simulated tidy dataset** (12 rows) containing **Fire Weather Index (FWI)**, burned area, and month. *(Generated in `data-raw/make_data.R` for demonstration purposes.)* |
 | **`run_app()`** | A Shiny app that visualises the relationship between FWI and log(burned area) with filters for month and minimum FWI. |
-| **Vignette** | Describes how the dataset was processed and how the Shiny app is designed. |
+| **Vignette** | Describes how the dataset was generated, documented, and visualized in the Shiny app vignette. |
 | **`inst/app/www/style.css`** | Provides custom CSS styling for the Shiny interface. |
 
 ## 📜 License
