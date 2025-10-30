@@ -13,9 +13,10 @@ ui <- fluidPage(
       selectInput("month", "Month", choices = c("All", month.abb), selected = "All"),
       checkboxInput("showLine", "Show trend line", TRUE),
 
-      tags$p(tags$em(
-        "Goal: Explore whether higher FWI is associated with larger burned area, and how this varies by month."
-      )),
+      tags$p(
+        tags$em("Goal: Explore whether higher FWI is associated with larger burned area, and how this varies by month."),
+        class = "goal-text"
+      ),
 
       tags$hr(),
       helpText(

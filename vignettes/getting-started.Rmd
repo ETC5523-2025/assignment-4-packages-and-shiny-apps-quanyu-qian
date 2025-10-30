@@ -16,28 +16,74 @@ knitr::opts_chunk$set(
 
 # Getting Started with _quanyu_
 
-This vignette introduces the **quanyu** package — an R package developed for _ETC5523 Assignment 4_.
-This short vignette demonstrates how to use the quanyu package.
+The **quanyu** package was created for *ETC5523 Assignment 4* to demonstrate how to bundle a dataset and a Shiny app into an R package.  
+It allows users to explore how **Fire Weather Index (FWI)** relates to **burned area** in bushfire events.
 
-🧩 Load the package
+## 🔥 What this package does
+
+The package provides:
+- A dataset `se_fire_monthly` summarising monthly fire weather and burned area.
+- A Shiny app (`run_app()`) that lets users interactively explore how FWI affects burned area.
+
+This helps users visually understand whether higher fire danger (FWI) corresponds to larger burned areas — and how this relationship changes by month.
+
+## ⚙️ Load the package
+
 ```r
 library(quanyu)
 ```
 
 
-🔍 View the dataset
+## 🔍 View the dataset
 ```r
 
 head(se_fire_monthly)
 
 ```
 
-🚀 Launch the Shiny app
+The dataset includes:
+
+- **month** – Month of observation  
+- **FWI** – *Fire Weather Index* (higher = more dangerous fire conditions)  
+- **burned_area** – *Area burned in hectares* (the plot uses `log10(burned_area)`)
+
+
+## 🚀 Launch the Shiny app
 ```r
 run_app()
 
 ```
+**App features:**
+
+- **Slider:** Filter by minimum FWI (to focus on high-risk conditions)
+- **Dropdown:** Select a month to see seasonal patterns
+- **Checkbox:** Show or hide the trend line
 
 
+## Interpreting the interactive results
+The following section explains how to interpret the interactive outputs from the Bushfire Explorer app and why the patterns matter in practice.
 
-This app allows you to explore the relationship between Fire Weather Index (FWI) and burned area interactively.
+
+### Interpretation and Real-world Implications
+
+The *Bushfire Explorer* app provides an interactive way to explore how the **Fire Weather Index (FWI)** relates to **burned area size**, and how this relationship changes under different conditions.
+
+### 1. Observed patterns
+In general, the data show that larger burned areas often occur under higher FWI values, indicating that **extreme fire weather tends to amplify fire impact**.  
+However, when the FWI threshold is set very high (e.g., above 50), the number of observations becomes small, and the correlation may weaken or even turn negative.  
+This reflects **the natural variability of fire events** — at extreme weather levels, other factors (such as vegetation type, fuel availability, or firefighting response) can dominate the outcome.
+
+### 2. Practical insight
+This variability highlights why **interactive filtering** is important:  
+users can adjust thresholds to observe how relationships change across conditions, months, or sample sizes.  
+For emergency planners, this means that **relying on a single static model could be misleading**; instead, dynamic exploration can reveal when FWI is a strong predictor and when it is not.
+
+### 3. Seasonal differences
+By selecting months, users can see that the FWI–burned area relationship fluctuates seasonally.  
+For example, in drier months, even moderate FWI levels can result in large burned areas, whereas in wetter months, the effect may flatten out.  
+This suggests that **fire risk management strategies should be tailored to seasonal and regional contexts**.
+
+### 4. Conclusion
+The Bushfire Explorer demonstrates how combining **data visualization** and **interactive filtering** helps translate raw climate indicators into nuanced, actionable insights.  
+Instead of offering a single conclusion, the app encourages **exploratory reasoning**, showing that relationships between weather and fire impact are conditional and context-dependent.
+

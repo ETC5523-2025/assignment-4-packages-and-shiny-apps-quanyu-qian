@@ -42,3 +42,15 @@ h2, h3 {
 
 .btn:hover {
   background-color: #0055aa;
+
+
+.goal-text{
+  color: #004c99 !important;
+  font-weight: 600;
+  font-style: italic;
+  background-color: #e6f0ff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: block;
+  margin-top: 8px;
+}

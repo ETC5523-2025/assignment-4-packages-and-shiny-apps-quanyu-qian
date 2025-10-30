@@ -7,15 +7,26 @@
 run_app()
 }
 \value{
-Opens the Shiny app in your browser.
+Launches the Shiny app in the browser window.
 }
 \description{
-This function launches the Shiny web application bundled in the package.
-It provides an interactive interface to explore the relationship between
-Fire Weather Index (FWI) and burned area using the packaged dataset.
+This function launches the interactive \strong{Bushfire Explorer} Shiny web application
+included in the \code{quanyu} package. The app provides an interface for exploring
+the relationship between \strong{Fire Weather Index (FWI)} and \strong{burned area} using
+the built-in dataset \code{se_fire_monthly}.
+}
+\details{
+The app allows users to:
+\itemize{
+\item Filter records by month and minimum FWI value
+\item Visualize the positive relationship between FWI and burned area
+\item Hover to view point-level details
+\item Explore results interactively with custom CSS styling
+}
 }
 \examples{
-if (interactive()) {
+\dontrun{
   run_app()
 }
+
 }

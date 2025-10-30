@@ -1,14 +1,23 @@
 #' Launch the Bushfire Explorer App
 #'
-#' This function launches the Shiny web application bundled in the package.
-#' It provides an interactive interface to explore the relationship between
-#' Fire Weather Index (FWI) and burned area using the packaged dataset.
+#' This function launches the interactive **Bushfire Explorer** Shiny web application
+#' included in the `quanyu` package. The app provides an interface for exploring
+#' the relationship between **Fire Weather Index (FWI)** and **burned area** using
+#' the built-in dataset `se_fire_monthly`.
 #'
-#' @return Opens the Shiny app in your browser.
+#' @details
+#' The app allows users to:
+#' - Filter records by month and minimum FWI value
+#' - Visualize the positive relationship between FWI and burned area
+#' - Hover to view point-level details
+#' - Explore results interactively with custom CSS styling
+#'
+#' @return Launches the Shiny app in the browser window.
 #' @examples
-#' if (interactive()) {
+#' \dontrun{
 #'   run_app()
 #' }
+#'
 #' @export
 run_app <- function() {
   app_dir <- system.file("app", package = "quanyu")
