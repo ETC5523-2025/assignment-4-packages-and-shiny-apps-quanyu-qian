@@ -59,21 +59,41 @@ It provides a small demo dataset and a Shiny app that allows users to interactiv
 <div class="section level2">
 <h2 id="id_-background">🧠 Background<a class="anchor" aria-label="anchor" href="#id_-background"></a>
 </h2>
-<p>This package builds upon earlier ETC5523 assignments where ERA5 and MODIS data were used to study bushfire conditions. For this assignment, a simplified and synthetic dataset <code>se_fire_monthly</code> (12 observations) was created to demonstrate the link between FWI and burned area. The dataset was generated using the R script <code>data-raw/make_data.R</code>, ensuring reproducibility.</p>
-<p>📘 <strong>View full documentation site here:</strong><br><a href="https://etc5523-2025.github.io/assignment-4-packages-and-shiny-apps-quanyu-qian/" class="uri">https://etc5523-2025.github.io/assignment-4-packages-and-shiny-apps-quanyu-qian/</a></p>
+<p>This package builds upon earlier ETC5523 assignments where ERA5 and MODIS data were used to study bushfire conditions. For this assignment, a simplified and synthetic dataset <code>se_fire_monthly</code> (100 observations) was created to demonstrate the link between FWI and burned area. The dataset was generated using the R script <code>data-raw/make_data.R</code>, ensuring reproducibility.</p>
 </div>
 <div class="section level2">
 <h2 id="id_-installation">🧩 Installation<a class="anchor" aria-label="anchor" href="#id_-installation"></a>
 </h2>
-<p>This is a demonstration package created for ETC5523 Assignment 4.</p>
-<p>You can build and load it in <strong>RStudio</strong> using:</p>
+<p>This is a demonstration package created for ETC5523 Assignment 4.<br>
+It provides an interactive Shiny app to explore the relationship between <strong>Fire Weather Index (FWI)</strong> and <strong>burned area</strong> in south-eastern Australia.</p>
+<hr>
+<div class="section level3">
+<h3 id="id_-for-users-recommended">🔹 For Users (Recommended)<a class="anchor" aria-label="anchor" href="#id_-for-users-recommended"></a>
+</h3>
+<p>Install and run the Bushfire Explorer app like a normal R package:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Load the package in development mode</span></span>
+<code class="sourceCode R"><span><span class="co"># 1) Install helper once</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># 2) Install this package from GitHub</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"ETC5523-2025/assignment-4-packages-and-shiny-apps-quanyu-qian"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># 3) Load and run</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">quanyu</span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/run_app.html">run_app</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="id_-for-developers--local-development-optional">🧑 For Developers / Local Development (optional)<a class="anchor" aria-label="anchor" href="#id_-for-developers--local-development-optional"></a>
+</h3>
+<p>Use this mode if you are contributing or testing the package source code.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Load the package in development mode (without installing)</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/load_all.html" class="external-link">load_all</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Launch the interactive Bushfire Explorer app</span></span>
-<span><span class="fu"><a href="reference/run_app.html">run_app</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">quanyu</span><span class="fu">::</span><span class="fu"><a href="reference/run_app.html">run_app</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>Once loaded, you can explore the relationship between <strong>fire weather index (FWI)</strong> and <strong>burned area</strong> interactively through the Bushfire Explorer Shiny app.</p>
+</div>
 </div>
 <div class="section level2">
 <h2 id="id_-package-features">🚀 Package Features<a class="anchor" aria-label="anchor" href="#id_-package-features"></a>
@@ -91,7 +111,7 @@ It provides a small demo dataset and a Shiny app that allows users to interactiv
 <tbody>
 <tr class="odd">
 <td><strong><code>se_fire_monthly</code></strong></td>
-<td>A <strong>simulated tidy dataset</strong> (12 rows) containing <strong>Fire Weather Index (FWI)</strong>, burned area, and month. <em>(Generated in <code>data-raw/make_data.R</code> for demonstration purposes.)</em>
+<td>A <strong>simulated tidy dataset</strong> (100 rows) containing <strong>Fire Weather Index (FWI)</strong>, burned area, and month. <em>(Generated in <code>data-raw/make_data.R</code> for demonstration purposes.)</em>
 </td>
 </tr>
 <tr class="even">
