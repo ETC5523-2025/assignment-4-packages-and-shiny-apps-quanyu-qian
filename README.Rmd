@@ -23,24 +23,44 @@ You can view the full documentation website here:
 
 ## 🧠 Background
 This package builds upon earlier ETC5523 assignments where ERA5 and MODIS data were used to study bushfire conditions.
-For this assignment, a simplified and synthetic dataset `se_fire_monthly` (12 observations) was created to demonstrate the link between FWI and burned area.
+For this assignment, a simplified and synthetic dataset `se_fire_monthly` (100 observations) was created to demonstrate the link between FWI and burned area.
 The dataset was generated using the R script `data-raw/make_data.R`, ensuring reproducibility.
 
-📘 **View full documentation site here:**  
-[https://etc5523-2025.github.io/assignment-4-packages-and-shiny-apps-quanyu-qian/](https://etc5523-2025.github.io/assignment-4-packages-and-shiny-apps-quanyu-qian/)
 
 ## 🧩 Installation
 
-This is a demonstration package created for ETC5523 Assignment 4.
+This is a demonstration package created for ETC5523 Assignment 4.  
+It provides an interactive Shiny app to explore the relationship between **Fire Weather Index (FWI)** and **burned area** in south-eastern Australia.
 
-You can build and load it in **RStudio** using:
+---
+
+### 🔹 For Users (Recommended)
+
+Install and run the Bushfire Explorer app like a normal R package:
 
 ```r
-# Load the package in development mode
+# 1) Install helper once
+install.packages("remotes")
+
+# 2) Install this package from GitHub
+remotes::install_github("ETC5523-2025/assignment-4-packages-and-shiny-apps-quanyu-qian")
+
+# 3) Load and run
+library(quanyu)
+run_app()
+```
+
+### 🧑 For Developers / Local Development (optional)
+
+Use this mode if you are contributing or testing the package source code.
+
+```r
+# Load the package in development mode (without installing)
 devtools::load_all()
 
 # Launch the interactive Bushfire Explorer app
-run_app()
+quanyu::run_app()
+
 ```
 Once loaded, you can explore the relationship between **fire weather index (FWI)** and **burned area** interactively through the Bushfire Explorer Shiny app.
 
@@ -50,7 +70,7 @@ This package contains the following components:
 
 | Component | Description |
 |------------|-------------|
-| **`se_fire_monthly`** | A **simulated tidy dataset** (12 rows) containing **Fire Weather Index (FWI)**, burned area, and month. *(Generated in `data-raw/make_data.R` for demonstration purposes.)* |
+| **`se_fire_monthly`** | A **simulated tidy dataset** (100 rows) containing **Fire Weather Index (FWI)**, burned area, and month. *(Generated in `data-raw/make_data.R` for demonstration purposes.)* |
 | **`run_app()`** | A Shiny app that visualises the relationship between FWI and log(burned area) with filters for month and minimum FWI. |
 | **Vignette** | Describes how the dataset was generated, documented, and visualized in the Shiny app vignette. |
 | **`inst/app/www/style.css`** | Provides custom CSS styling for the Shiny interface. |
